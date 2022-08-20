@@ -1,0 +1,33 @@
+{
+    "name": "undermuz/junior-php-contest",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Undermuz",
+            "email": "undermuz@gmail.com"
+        }
+    ],
+    "scripts": {
+        "test": "phpunit",
+        "test:db": "phpunit --filter DBTest",
+        "test:api": "phpunit --filter ApiTest",
+        "bootstrap": "php src/bootstrap.php",
+        "serve": "php -S localhost:8081 src/server.php"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src",
+            "App\\Tests\\": "tests"
+        },
+        "files": [
+            "src/db/connection.php",
+            "src/db/initial.php"
+        ]
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
