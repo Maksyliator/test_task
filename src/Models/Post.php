@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\db\DB;
 use PDO;
+
 use function App\db\connection\createConnection;
 
 class Post
@@ -58,7 +59,7 @@ VALUES (:title, :body, :creator_id, :created_at)";
         return self::createFromRow($row);
     }
 
-    public static function createFromRow (array $row): ?self
+    public static function createFromRow(array $row): ?self
     {
         if (empty($row)) {
             return null;

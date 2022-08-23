@@ -3,9 +3,9 @@
 namespace App\Models;
 
 use function App\db\connection\createConnection;
+
 use App\db\DB;
 use PDO;
-
 
 class User
 {
@@ -61,7 +61,7 @@ VALUES (:email, :first_name, :last_name, :password, :created_at)";
         return self::createFromRow($row);
     }
 
-    public static function createFromRow (array $row): ?self
+    public static function createFromRow(array $row): ?self
     {
         if (empty($row)) {
             return null;

@@ -12,7 +12,9 @@
         "test:db": "phpunit --filter DBTest",
         "test:api": "phpunit --filter ApiTest",
         "bootstrap": "php src/bootstrap.php",
-        "serve": "php -S localhost:8081 src/server.php"
+        "serve": "php -S localhost:8081 src/server.php",
+        "phpcs": "phpcs",
+        "phpcbf": "phpcbf"
     },
     "autoload": {
         "psr-4": {
@@ -29,6 +31,7 @@
         "ext-pdo": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.7"
     }
 }
